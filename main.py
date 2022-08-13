@@ -1,16 +1,77 @@
-# This is a sample Python script.
+def ex1():
+    # EX1
+    x = int(input("Enter first number: "))
+    y = int(input("Enter second number: "))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    product = x * y
+    print(product)
+
+    if product > 1000:
+        print(x + y)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def ex2():
+    # EX2
+    last_number = None
+    for i in range(0, 10):
+        if last_number != None:
+            sum = last_number + i
+            print(sum)
+        last_number = i
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def ex3():
+    # EX3
+    list = [1, 2, 3, 4, 5, 7, 84, 6, 1]
+    if list[0] == list[-1]:
+        print("nice")
+    else:
+        print("wrong")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def ex4():
+    # EX 4
+    list2 = [0, 5, 6, 7, 8, 10, 23, 46]
+    for i in list2:
+        if int(i) % 5 == 0:
+            print(i)
+
+
+def ex5():
+    # EX 5
+    string1 = 'Emma is a good developer. Emma is also a writer'
+    word = 'Emma'
+    count = int(0)
+    eos = False
+    while not eos:
+        tmp = string1.find(word)
+        if tmp == -1:
+            eos = True
+        else:
+            count += 1
+            string1=string1[tmp+len(word):]
+
+    print("String: " + word + " , " + str(count) + " times")
+
+
+def ex6() :
+    # EX6
+    list1=[1,2,4,5,3,54,3,23,43,34,33]
+    list2=[0,1,2,3,4,5,6,7,8,9]
+    list3=[]
+    for i in list1:
+        if not i%2==0:
+            list3.append(i)
+    for a in list2:
+        if a%2 ==0:
+            list3.append(a)
+    print(list3)
+
+def ex7() :
+    # EX 7
+    str1 = '1111111111'
+    str2 = '2222'
+
+    str3 = str1[:(len(str1))//2] +str2 +str1[(len(str1))//2:]
+    print(str3)
+ex7()
